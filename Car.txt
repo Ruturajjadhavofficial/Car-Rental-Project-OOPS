@@ -1,0 +1,54 @@
+// Class representing a Car
+class Car {
+    // Car attributes
+    private String carId;
+    private String brand;
+    private String model;
+    private double basePricePerDay;
+    private boolean isAvailable;
+    
+    // Constructor to initialize Car object with details
+    public Car(String carId, String brand, String model, double basePricePerDay) {
+        this.carId = carId;
+        this.brand = brand;
+        this.model = model;
+        this.basePricePerDay = basePricePerDay;
+        this.isAvailable = true; // All cars are available when created
+    }
+    
+    // Getters and Setters for Car attributes
+    public String getCarId() {
+        return carId;
+    }
+    
+    public String getBrand() {
+        return brand;
+    }
+    
+    public String getModel() {
+        return model;
+    }
+    
+    public double getPricePerDay() {
+        return basePricePerDay;
+    }
+    
+    public boolean isAvailable() {
+        return isAvailable;
+    }
+    
+    // Method to mark car as rented (unavailable)
+    public void rent() {
+        isAvailable = false;
+    }
+    
+    // Method to mark car as returned (available)
+    public void returnCar() {
+        isAvailable = true;
+    }
+    
+    // Method to calculate total rental cost based on rental days
+    public double calculatePrice(int rentalDays) {
+        return basePricePerDay * rentalDays;
+    }
+}

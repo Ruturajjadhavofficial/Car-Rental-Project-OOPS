@@ -1,0 +1,21 @@
+// Class representing a Customer
+class Customer {
+    // Customer attributes
+    private String customerId;
+    private String name;
+    
+    // Constructor to initialize Customer object with details
+    public Customer(String customerId, String name) {
+        this.customerId = customerId;
+        this.name = name;
+    }
+    
+    // Getters for Customer attributes
+    public String getCustomerId() {
+        return customerId;
+    }
+    
+    public String getName() {
+        return name;
+    }
+}

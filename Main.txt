@@ -1,0 +1,24 @@
+
+// Main class to run the Car Rental System
+public class CarRentalClass {
+    public static void main(String[] args) {
+        // Initialize the RentalSystem and add a sample car
+        RentalSystem rentalSystem = new RentalSystem();
+        // Creating car objects
+        Car car1 = new Car("C001", "Toyota", "Camry", 150);
+        Car car2 = new Car("C002", "Honda", "Civic", 130);
+        Car car3 = new Car("C003", "Ford", "Mustang", 200);
+        Car car4 = new Car("C004", "BMW", "X5", 250);
+        Car car5 = new Car("C005", "Mercedes", "C-Class", 220);
+        
+        // Adding cars to the rental system
+        rentalSystem.addCar(car1);
+        rentalSystem.addCar(car2);
+        rentalSystem.addCar(car3);
+        rentalSystem.addCar(car4);
+        rentalSystem.addCar(car5);
+        
+        // Start the menu
+        rentalSystem.menu();
+    }
+}
